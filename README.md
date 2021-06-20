@@ -1,39 +1,48 @@
-# 通讯录管理系统
+# TelSystem
 
 #### 介绍
-本项目前端采用ExtJS，后端采用SpringBoot集成JPA，连接MySQL数据库，于大三的5月20日完成。  
-我的520与众不同......  
-最初采用Eclipse工具开发，后转Idea，是我参加正式项目前最后一个练手小项目。    
-通讯录管理系统，顾名思义就是保存电话号码的；本系统支持对联系人、电话号码的CRUD导入导出。  
- 
-## 界面预览
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/104943_7dfc1300_7525468.png "11.png")
+- 通讯录系统，包含CRUD(含多重复杂查询)、Excel导入导出、图形量化分析，麻雀虽小五脏俱全！
+- 技术栈：前端:Ext、后端SpringBoot，使用forestry模板。
+- 是我在参与正式付费项目之前最后一个自制项目，虽然没有什么新技术，但能够稳固自己的基础。
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/104954_84fd85d6_7525468.png "22.png")
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/105000_3f3807f5_7525468.png "33.png")
+![主界面](https://images.gitee.com/uploads/images/2020/0617/224707_dd8f8f9b_7525468.png "主界面.png")
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/105006_4a1b59dd_7525468.png "44.png")
+#### 软件架构
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/105012_d3e323cf_7525468.png "55.png")
+- --src
+- 	--core  模板
+- 	--ypc--zwz--controller  控制层
+- 	--ypc--zwz--service     业务逻辑层
+- 	--ypc--zwz--dao         数据持久层
+- 	--ypc--zwz--model       数据模型
+- 	--ypc--zwz--core         相关工具类
+- --resources
+- 	--applicationContext.xml   配置文件
+- 	--jdbc.properties          配置数据库信息
+- --WebContent
+- 	--static--download  Excel导出模板文件
+- 	--static--ext--examples--portal  前台ExtJS文件
+- 	--static--img   前台背景图片
+- 	--WEB-INF--lib 所需要的Jar包
+- 	--WEB-INF--page--back--main.jsp  主页
+- 	--WEB-INF--page--loginExt.jsp  登入页面验证码输入错误后的登入页面
+- 	--WEB-INF--page--loginFail.jsp  登入失败的页面(不包含验证码错误)
+- 	--WEB-INF--web.xml  配置文件
+- 	loginExt.jsp   登入页面
 
-![界面预览](https://images.gitee.com/uploads/images/2021/0604/105020_ab6243af_7525468.png "66.png")
 
-## 安装教程
+#### 安装教程
 
-1.本机安装GIT，输入命令
-```java
-git clone https://gitee.com/yyzwz/TelSystem.git
-```
-2.使用idea导入该项目，maven方式导入,eclipse分支的jar包，需要从master分支拷贝到lib文件夹下!
+1.  使用IDE（我是用eclipse202003）导入项目
+2.  修改Java build path中的 JDK 、Tomcat版本
+3.  在jdbc.properties中，修改数据库配置
+3.  运行项目
 
-3.导入数据库（property.sql）
 
-4.运行项目，账号admin 密码123456
+#### 个人博客
 
-### 欢迎光临我的博客：https://zwz99.blog.csdn.net/   
-![我的CSDN博客](https://images.gitee.com/uploads/images/2021/0604/100703_32e14138_7525468.jpeg "132246_599dbf21_7525468.jpeg")
+https://blog.csdn.net/qq_41464123
 
-### 和我的公众号：元培ACM社团   
-![我的微信公众号](https://images.gitee.com/uploads/images/2021/0604/100801_30c6572c_7525468.jpeg "aaaaaa.jpg")
+![我的博客](https://images.gitee.com/uploads/images/2020/0526/132246_599dbf21_7525468.jpeg "在这里输入图片标题")
